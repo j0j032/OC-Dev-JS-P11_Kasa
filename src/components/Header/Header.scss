@@ -8,8 +8,6 @@ nav{
   }
 }
   .header{
-    font-weight: 500;
-    font-family: $montserra;
   &__container{
     margin:2.4rem;
     padding: 2.4rem;
@@ -40,12 +38,10 @@ nav{
     }
     &-link{
       color: $corail;
-      text-decoration: none;
       @include mobile{
         margin-left: 2.4rem;
       }
       &--active{
-        text-decoration: none;
         color: $corail;
         position: relative;
         @include mobile{

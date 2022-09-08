@@ -1,9 +1,12 @@
 import React from 'react';
+import Header from "../components/Header/Header";
+import Error404cmpnt from "../components/Error404/Error404cmpnt";
 
 const Error404 = () => {
     return (
         <div>
-            <h1>404</h1>
+            <Header/>
+            <Error404cmpnt/>
         </div>
     );
 };
