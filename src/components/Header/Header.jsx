@@ -5,12 +5,12 @@ const Header = () => {
     return (
         <div className={"header__container"}>
             <img className={"header__logo"} src={"./fullLogo.svg"} alt={"Kasa, location d'appartement entre particulier"}/>
-            <nav className={"header__nav"}>
-                <ul>
-                    <NavLink to={"/"} className={(nav) =>(nav.isActive ? "header__nav-active" : "")}>
+            <nav>
+                <ul className={"header__nav"}>
+                    <NavLink to={"/"} className={(nav) =>(nav.isActive ? "header__nav-link--active" : "header__nav-link")}>
                         <li>Accueil</li>
                     </NavLink>
-                    <NavLink to={"/about"} className={(nav) =>(nav.isActive ? "header__nav-active" : "")}>
+                    <NavLink to={"/about"} className={(nav) =>(nav.isActive ? "header__nav-link--active" : "header__nav-link")}>
                         <li>A propos</li>
                     </NavLink>
                 </ul>
