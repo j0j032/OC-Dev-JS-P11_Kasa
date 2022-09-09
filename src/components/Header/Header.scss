@@ -25,6 +25,9 @@ nav {
 	@include mobile {
 	  width: 140px;
 	}
+	@include smallMobile {
+	  width: 80px;
+	}
   }
   
   &__nav {
@@ -45,6 +48,7 @@ nav {
 	  
 	  &--active {
 		position: relative;
+		margin-left: 2.4rem;
 		color: $corail;
 		@include mobile {
 		  margin-left: 2.4rem;

@@ -1,6 +1,13 @@
 @mixin mobile {
-  $breakpoints: (mobile:700px);
+  $breakpoints: (mobile:730px);
   @media screen and (max-width: map-get($breakpoints, mobile)) {
+	@content;
+  }
+}
+
+@mixin smallMobile {
+  $breakpoints: (smallMobile:370px);
+  @media screen and (max-width: map-get($breakpoints, smallMobile)) {
 	@content;
   }
 }
@@ -14,7 +21,7 @@
 
 @mixin bigScreen {
   $breakpoints: (bigScreen:1440px);
-  @media screen and (max-width: map-get($breakpoints, bigScreen)) {
+  @media screen and (min-width: map-get($breakpoints, bigScreen)) {
 	@content;
   }
 }
@@ -29,6 +36,10 @@
 @mixin pageMargin {
   margin-left: 100px;
   margin-right: 100px;
+  @include tablet {
+	margin-left: 3.2rem;
+	margin-right: 3.2rem;
+  }
   @include mobile {
 	margin-left: 2.4rem;
 	margin-right: 2.4rem;
