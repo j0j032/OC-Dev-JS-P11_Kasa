@@ -4,8 +4,8 @@ import Header from "../components/Header/Header";
 const About = () => {
     return (
         <div>
-           <Header/>
-            <p>ABOUT</p>
+            <Header/>
+            <img src={`./bannerCover2.jpg`} alt={'paysage'}/>
         </div>
     );
 };

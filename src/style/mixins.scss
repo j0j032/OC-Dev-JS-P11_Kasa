@@ -1,6 +1,47 @@
-@mixin mobile{
-  $breakpoints:(mobile:700px);
-  @media screen and (max-width:map-get($breakpoints, mobile)) {
-    @content;
+@mixin mobile {
+  $breakpoints: (mobile:730px);
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+	@content;
+  }
+}
+
+@mixin smallMobile {
+  $breakpoints: (smallMobile:370px);
+  @media screen and (max-width: map-get($breakpoints, smallMobile)) {
+	@content;
+  }
+}
+
+@mixin tablet {
+  $breakpoints: (tablet:1010px);
+  @media screen and (max-width: map-get($breakpoints, tablet)) {
+	@content;
+  }
+}
+
+@mixin bigScreen {
+  $breakpoints: (bigScreen:1440px);
+  @media screen and (min-width: map-get($breakpoints, bigScreen)) {
+	@content;
+  }
+}
+
+@mixin absoluteCentered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin pageMargin {
+  margin-left: 100px;
+  margin-right: 100px;
+  @include tablet {
+	margin-left: 3.2rem;
+	margin-right: 3.2rem;
+  }
+  @include mobile {
+	margin-left: 2.4rem;
+	margin-right: 2.4rem;
   }
 }
