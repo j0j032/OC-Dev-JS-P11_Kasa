@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from "../components/Header/Header";
 import FlatList from "../components/flatList/FlatList";
+import Footer from "../components/footer/Footer";
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
                 <span>Chez vous, partout et ailleurs</span>
             </div>
             <FlatList/>
+            <Footer/>
         </div>
     );
 };
