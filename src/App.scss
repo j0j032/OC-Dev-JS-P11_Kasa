@@ -1,19 +1,17 @@
-//noinspection SassScssResolvedByNameOnly
+// noinspection SassScssResolvedByNameOnly
 * {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
 body {
-  background: $white;
-  color: $corail;
   font-size: 1.6rem;
-  margin-left: 100px;
-  margin-right: 100px;
-  @include mobile {
-    margin-left: 2.4rem;
-    margin-right: 2.4rem;
-  }
+  color: $corail;
+  background: $white;
+}
+
+main {
+  @include pageMargin()
 }
 
 a {
@@ -22,29 +20,29 @@ a {
 }
 
 .banner {
-  height: fit-content;
   position: relative;
+  max-width: fit-content;
+  height: fit-content;
   margin-top: 50px;
   margin-bottom: 50px;
-  background: $Black;
   border-radius: 26px;
-  max-width: fit-content;
-
+  background: $Black;
+  
   > img {
-    z-index: 1;
-    border-radius: 25px;
-    opacity: 0.7;
+	z-index: 1;
+	opacity: 0.7;
+	border-radius: 25px;
   }
-
+  
   > span {
-    z-index: 2;
-    @include absoluteCentered();
-    width: max-content;
-    color: $white;
-    font-size: 4.8rem;
-    @include mobile {
-      font-size: 2.4rem;
-    }
-
+	z-index: 2;
+	@include absoluteCentered();
+	font-size: 4.8rem;
+	width: max-content;
+	color: $white;
+	@include mobile {
+	  font-size: 2.4rem;
+	}
+	
   }
 }

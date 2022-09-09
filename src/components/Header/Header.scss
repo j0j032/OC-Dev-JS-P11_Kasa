@@ -1,73 +1,80 @@
-  //noinspection SassScssResolvedByNameOnly
-nav{
-  @include mobile{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 180px;
+// noinspection SassScssResolvedByNameOnly
+nav {
+  @include mobile {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 180px;
   }
 }
-  .header{
-  &__container{
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @include mobile{
-      margin: 1.6rem;
-      padding: 1.6rem;
-    }
-  }
-    &__logo{
-      @include mobile{
-        width: 140px;
-      }
-    }
-  &__nav{
-    padding-inline-start: 0;
-    width: 320px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
-    font-size: 2.4rem;
-    @include mobile{
-      font-size: 1.6rem;
-    }
-    &-link{
-      color: $corail;
-      margin-left: 2.4rem;
-      &--active{
-        color: $corail;
-        position: relative;
-        @include mobile{
-          margin-left: 2.4rem;
-        }
-        &::after {
-          content: "";
-          height: 2px;
-          width: 0;
-          background: $corail;
-          position: absolute;
-          border-radius: 10px;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          -webkit-animation: anim 0.2s ease forwards;
-          animation: anim 0.3s ease forwards;
 
-          @-webkit-keyframes anim {
-            to {
-              width: 100%;
-            }
-          }
-          @keyframes anim {
-            to {
-              width: 100%;
-            }
-          }
-        }
-      }
-    }
+.header {
+  &__container {
+	@include pageMargin();
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 40px;
+	@include mobile {
+	  margin: 1.6rem;
+	  padding: 1.6rem;
+	}
+  }
+  
+  &__logo {
+	@include mobile {
+	  width: 140px;
+	}
+  }
+  
+  &__nav {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	font-size: 2.4rem;
+	width: 320px;
+	list-style: none;
+	padding-inline-start: 0;
+	@include mobile {
+	  font-size: 1.6rem;
+	}
+	
+	&-link {
+	  margin-left: 2.4rem;
+	  color: $corail;
+	  
+	  &--active {
+		position: relative;
+		color: $corail;
+		@include mobile {
+		  margin-left: 2.4rem;
+		}
+		
+		&::after {
+		  position: absolute;
+		  bottom: 0;
+		  left: 50%;
+		  width: 0;
+		  height: 2px;
+		  content: "";
+		  transform: translateX(-50%);
+		  -webkit-animation: anim 0.2s ease forwards;
+		  animation: anim 0.3s ease forwards;
+		  border-radius: 10px;
+		  background: $corail;
+		  
+		  @-webkit-keyframes anim {
+			to {
+			  width: 100%;
+			}
+		  }
+		  @keyframes anim {
+			to {
+			  width: 100%;
+			}
+		  }
+		}
+	  }
+	}
   }
 }
