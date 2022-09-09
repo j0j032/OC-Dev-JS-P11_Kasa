@@ -4,3 +4,22 @@
     @content;
   }
 }
+@mixin tablet{
+  $breakpoints:(tablet:1010px);
+  @media screen and (max-width:map-get($breakpoints, tablet)) {
+    @content;
+  }
+}
+@mixin bigScreen{
+  $breakpoints:(bigScreen:1440px);
+  @media screen and (max-width:map-get($breakpoints, bigScreen)) {
+    @content;
+  }
+}
+
+@mixin absoluteCentered{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}

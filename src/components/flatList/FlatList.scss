@@ -1,0 +1,16 @@
+.flat-item {
+  &__container {
+	padding: 50px;
+	border-radius: 24px;
+	background: $lightGray;
+  }
+  
+  &__repeater {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: fit-content;
+	padding-inline-start: 0;
+	gap: 40px;
+  }
+}
