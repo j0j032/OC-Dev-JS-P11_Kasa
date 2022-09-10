@@ -15,7 +15,7 @@ const Lodging = () => {
 	return (
 		<div>
 			<Header/>
-			<img src={lodging.cover} alt={lodging.title}/>
+			{/*<Carrousel lodging={lodging}/>*/}
 			<h1>{lodging.title}</h1>
 			<Footer/>
 		</div>
