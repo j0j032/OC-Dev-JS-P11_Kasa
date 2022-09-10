@@ -1,5 +1,5 @@
 import React from 'react'
-import Rating from '../Rating'
+import Rating from '../rating/Rating'
 
 const LodgingInfos = ({lodging}) => {
 	const {id, title, location, rating /* host: {name, picture}*/} = lodging
@@ -13,9 +13,7 @@ const LodgingInfos = ({lodging}) => {
 			}
 			<p>{name}</p>
 			<img src={picture} alt={name}/>*/}
-			<div>
-				<Rating rating={rating}/>
-			</div>
+			<Rating rating={rating}/>
 		
 		</div>
 	)

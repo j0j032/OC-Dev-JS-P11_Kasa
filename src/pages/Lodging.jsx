@@ -18,9 +18,6 @@ const Lodging = () => {
 			<Header/>
 			{/*<Carrousel lodging={lodging}/>*/}
 			<LodgingInfos lodging={lodging}/>
-			<ul>
-			</ul>
-			
 			<Footer/>
 		</div>
 	)
