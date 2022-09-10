@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom'
 import axios from 'axios'
 import Header from '../components/Header/Header'
 import Footer from '../components/footer/Footer'
+import LodgingInfos from '../components/lodgingInfos/LodgingInfos'
 
 const Lodging = () => {
 	const {id} = useParams()
@@ -16,7 +17,10 @@ const Lodging = () => {
 		<div>
 			<Header/>
 			{/*<Carrousel lodging={lodging}/>*/}
-			<h1>{lodging.title}</h1>
+			<LodgingInfos lodging={lodging}/>
+			<ul>
+			</ul>
+			
 			<Footer/>
 		</div>
 	)
