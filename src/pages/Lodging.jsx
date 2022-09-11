@@ -1,23 +1,28 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import {useParams} from 'react-router-dom'
-import axios from 'axios'
 import Header from '../components/Header/Header'
 import Footer from '../components/footer/Footer'
 import LodgingInfos from '../components/lodgingInfos/LodgingInfos'
+import Carrousel from '../components/carrousel/Carrousel'
+import {useGetData} from '../components/api'
+import Loader from '../components/loader/Loader'
 
 const Lodging = () => {
-	const {id} = useParams()
-	const [lodging, setLodging] = useState({})
-	const url = '../data/flats.json'
-	useEffect(() => {
-		axios.get(url).then((res) => setLodging(res.data.find((el) => el.id === id)))
-	}, [])
 	
-	return (
+	const {id} = useParams()
+	const findById = {
+		method: 'find',
+		callback: (item) => item.id === id
+	}
+	const {data, isLoading, error} = useGetData('../data/flats.json', findById)
+	
+	if (error) return <span>Oups il y a eu un problème</span>
+	
+	return isLoading ? (<Loader/>) : (
 		<div>
 			<Header/>
-			{/*<Carrousel lodging={lodging}/>*/}
-			<LodgingInfos lodging={lodging}/>
+			<Carrousel lodging={data}/>
+			<LodgingInfos lodging={data}/>
 			<Footer/>
 		</div>
 	)

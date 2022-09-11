@@ -9,8 +9,8 @@ const Carrousel = ({lodging}) => {
 	return (
 		<div>
 			<img src={pictures[currentPicture]} alt={`${title} n° ${currentPicture + 1}`}/>
-			<span onClick={prevPicture}>BACK</span>
-			<span onClick={nextPicture}>NEXT</span>
+			<span onClick={() => prevPicture()}>BACK</span>
+			<span onClick={() => nextPicture()}>NEXT</span>
 		</div>
 	)
 }

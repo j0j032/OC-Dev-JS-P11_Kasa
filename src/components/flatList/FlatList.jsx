@@ -1,23 +1,23 @@
-import React, {useEffect, useState} from 'react'
-import axios from 'axios'
 import FlatItem from '../flatItem/FlatItem'
+import {useGetData} from '../api'
+import Loader from '../loader/Loader'
 
 const FlatList = () => {
-	const [data, setData] = useState([])
-	const url = './data/flats.json'
-	useEffect(() => {
-		axios.get(url).then((res) => setData(res.data))
-	}, [])
+	const {data, isLoading, error} = useGetData()
+	
+	if (error) return <span>Oups, il y a eu un problème</span>
 	
 	return (
 		<div className={'flat-item__container'}>
-			<ul className={'flat-item__repeater'}>
-				{
-					data.map((flat) => (
-						<FlatItem key={flat.id} flat={flat}/>
-					))
-				}
-			</ul>
+			{isLoading ? (<Loader/>) : (
+				<ul className={'flat-item__repeater'}>
+					{
+						data.map((flat) => (
+							<FlatItem key={flat.id} flat={flat}/>
+						))
+					}
+				</ul>
+			)}
 		</div>
 	)
 }
