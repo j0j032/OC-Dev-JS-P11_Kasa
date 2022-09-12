@@ -7,24 +7,17 @@ const Carrousel = ({lodging}) => {
 	const nextPicture = () => (currentPicture < pictures.length - 1) ? setCurrentPicture(currentPicture + 1) : (setCurrentPicture(0))
 	const prevPicture = () => (currentPicture === 0) ? setCurrentPicture(pictures.length - 1) : (setCurrentPicture(currentPicture - 1))
 	return (
-		<div>
-			<img src={pictures[currentPicture]} alt={`${title} n° ${currentPicture + 1}`}/>
-			<span onClick={() => prevPicture()}>BACK</span>
-			<span onClick={() => nextPicture()}>NEXT</span>
+		<div className={'carrousel'}>
+			<img className={'carrousel__img'} src={pictures[currentPicture]}
+				 alt={`${title} n° ${currentPicture + 1}`}/>
+			<span className={'carrousel__arrow--left'} onClick={() => prevPicture()}>
+				<img src={'../arrowLeft.svg'} alt={'précédent'}/>
+			</span>
+			<span className={'carrousel__arrow--right'} onClick={() => nextPicture()}>
+				<img src={'../arrowRight.svg'} alt={'suivant'}/>
+			</span>
 		</div>
 	)
 }
-
-/*const Carrousel = ({lodging}) => {
-	const {pictures} = lodging
-	return (
-		<div>
-			<img src={pictures[0]}/>
-			<span>BACK</span>
-			<span>NEXT</span>
-		</div>
-	)
-}*/
-
 
 export default Carrousel

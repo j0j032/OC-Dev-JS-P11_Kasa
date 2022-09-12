@@ -22,12 +22,14 @@ const Lodging = () => {
 	return isLoading ? (<Loader/>) : (
 		<div>
 			<Header/>
-			<Carrousel lodging={data}/>
-			<LodgingInfos lodging={data}/>
-			<div className={'toggle__section'}>
-				<Dropdown value={'Description'} content={data.description}/>
-				<Dropdown value={'Équipements'} content={data.equipments}/>
-			</div>
+			<main>
+				<Carrousel lodging={data}/>
+				<LodgingInfos lodging={data}/>
+				<div className={'toggle__section'}>
+					<Dropdown value={'Description'} content={data.description}/>
+					<Dropdown value={'Équipements'} content={data.equipments}/>
+				</div>
+			</main>
 			<Footer/>
 		</div>
 	)
