@@ -1,0 +1,60 @@
+.infos {
+  display: flex;
+  justify-content: space-between;
+  
+  &-1 {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	max-width: 70%;
+  }
+  
+  &-2 {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	max-width: 25%;
+  }
+  
+  &__title {
+	margin-bottom: 0.8rem;
+  }
+  
+  &__location {
+	margin-bottom: 1.6rem;
+  }
+  
+  &__tags {
+	display: flex;
+	justify-content: start;
+	gap: 1rem;
+  }
+  
+  &__tag {
+	font-size: 1.4rem;
+	font-weight: 300;
+	padding: 0.7rem 2rem 0.7rem 2rem;
+	color: $white;
+	border-radius: 14px;
+	background-color: $corail;
+  }
+  
+  &__identity {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3.2rem;
+	
+	&--name {
+	  width: 100px;
+	  margin-right: 16px;
+	  text-align: end;
+	}
+	
+	&--profilePic {
+	  width: 64px;
+	  height: 64px;
+	  clip-path: circle();
+	}
+  }
+}
