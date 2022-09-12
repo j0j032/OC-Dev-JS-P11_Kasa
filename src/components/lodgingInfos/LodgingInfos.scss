@@ -1,12 +1,19 @@
 .infos {
   display: flex;
   justify-content: space-between;
+  @include mobile {
+	flex-direction: column;
+  }
   
   &-1 {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
 	max-width: 70%;
+	@include mobile {
+	  max-width: 100%;
+	  margin-bottom: 1.6rem;
+	}
   }
   
   &-2 {
@@ -14,19 +21,31 @@
 	justify-content: space-between;
 	flex-direction: column;
 	max-width: 25%;
+	@include mobile {
+	  align-items: center;
+	  flex-direction: row-reverse;
+	  max-width: 100%;
+	}
   }
   
   &__title {
 	margin-bottom: 0.8rem;
+	@include mobile {
+	  font-size: 2.4rem;
+	}
   }
   
   &__location {
 	margin-bottom: 1.6rem;
+	@include mobile {
+	  font-size: 1.6rem;
+	}
   }
   
   &__tags {
 	display: flex;
 	justify-content: start;
+	flex-wrap: wrap;
 	gap: 1rem;
   }
   
@@ -37,6 +56,9 @@
 	color: $white;
 	border-radius: 14px;
 	background-color: $corail;
+	@include smallMobile {
+	  font-size: 1.2rem;
+	}
   }
   
   &__identity {
@@ -44,6 +66,9 @@
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 3.2rem;
+	@include mobile {
+	  margin-bottom: 0;
+	}
 	
 	&--name {
 	  width: 100px;
@@ -55,6 +80,10 @@
 	  width: 64px;
 	  height: 64px;
 	  clip-path: circle();
+	  @include mobile {
+		width: 48px;
+		height: 48px;
+	  }
 	}
   }
 }

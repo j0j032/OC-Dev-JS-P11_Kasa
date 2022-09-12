@@ -6,8 +6,11 @@ const Rating = ({rating}) => {
 		<div className={'raiting-container'}>
 			{range.map((rangeElem) =>
 				rating >= rangeElem ? (
-					<img key={rangeElem.toString()} src={'../starFilled.svg'} alt={'note remplie'}/>
-				) : <img key={rangeElem.toString()} src={'../starEmpty.svg'} alt={'note remplie'}/>
+					<img className={'stars'} key={rangeElem.toString()} src={'../starFilled.svg'}
+						 alt={'note' +
+							 'remplie'}/>
+				) : <img className={'stars'} key={rangeElem.toString()} src={'../starEmpty.svg'}
+						 alt={'note vide'}/>
 			)}
 		</div>
 	)

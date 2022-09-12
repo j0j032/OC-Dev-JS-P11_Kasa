@@ -8,12 +8,18 @@
   
   &__section {
 	display: grid;
-	margin-top: 80px;
+	margin-top: 40px;
 	grid-template-columns: 1fr 1fr;
-	gap: 80px;
+	gap: 64px;
 	grid-template-areas:
     ". ."
     ". .";
+	@include mobile {
+	  display: flex;
+	  flex-direction: column;
+	  margin-top: 4rem;
+	  gap: 1.6rem;
+	}
 	
 	&__section--about {
 	  display: grid;
@@ -61,7 +67,6 @@
 	  opacity: 1;
 	  border-radius: 12px;
 	  background: $lightGray;
-	  animation-fill-mode: forwards;
 	  
 	  > li {
 		font-weight: 300;
