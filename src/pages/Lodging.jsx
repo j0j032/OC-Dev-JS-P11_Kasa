@@ -24,8 +24,10 @@ const Lodging = () => {
 			<Header/>
 			<Carrousel lodging={data}/>
 			<LodgingInfos lodging={data}/>
-			<Dropdown value={'Description'} content={data.description}/>
-			<Dropdown value={'Equipements'} content={data.equipments}/>
+			<div className={'toggle__section'}>
+				<Dropdown value={'Description'} content={data.description}/>
+				<Dropdown value={'Équipements'} content={data.equipments}/>
+			</div>
 			<Footer/>
 		</div>
 	)
