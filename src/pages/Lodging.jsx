@@ -6,6 +6,7 @@ import LodgingInfos from '../components/lodgingInfos/LodgingInfos'
 import Carrousel from '../components/carrousel/Carrousel'
 import {useGetData} from '../components/api'
 import Loader from '../components/loader/Loader'
+import Dropdown from '../components/Dropdown/Dropdown'
 
 const Lodging = () => {
 	
@@ -23,6 +24,8 @@ const Lodging = () => {
 			<Header/>
 			<Carrousel lodging={data}/>
 			<LodgingInfos lodging={data}/>
+			<Dropdown value={'Description'} content={data.description}/>
+			<Dropdown value={'Equipements'} content={data.equipments}/>
 			<Footer/>
 		</div>
 	)
