@@ -14,10 +14,10 @@ const About = () => {
 		<div>
 			<Header/>
 			<main>
-				<div className={'banner banner--about'}>
-					<img src={bannerCover} alt={'paysage'}/>
+				<div className='banner banner--about'>
+					<img src={bannerCover} alt='paysage'/>
 				</div>
-				<div className={'dropdowns-container'}>
+				<div className='dropdowns-container'>
 					<Dropdown value={'Fiabilité'} content={fiability}/>
 					<Dropdown value={'Respect'} content={respect}/>
 					<Dropdown value={'Service'} content={service}/>

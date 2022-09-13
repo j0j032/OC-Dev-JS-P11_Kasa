@@ -6,11 +6,11 @@ const Dropdown = ({value, content}) => {
 	const onToggle = () => setIsOpen(!isOpen)
 	return (
 		<div>
-			<button className={'toggle'} onClick={onToggle}>
-				<div className={'toggle__btn'}>
+			<button className='toggle' onClick={onToggle}>
+				<div className='toggle__btn'>
 					<p>{value}</p>
 					<img className={isOpen ? 'toggle__arrow--up' : 'toggle__arrow--down'}
-						 src={arrowDown} alt={'arrow'}/>
+						 src={arrowDown} alt='arrow'/>
 				</div>
 			</button>
 			{
