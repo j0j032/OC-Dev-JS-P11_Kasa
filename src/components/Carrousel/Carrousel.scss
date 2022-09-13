@@ -17,6 +17,17 @@
 	object-fit: cover;
   }
   
+  &__counter {
+	position: absolute;
+	top: 90% !important;
+	@include absoluteCentered();
+	font-size: 2.4rem;
+	color: $white;
+	@include mobile {
+	  font-size: 1.6rem;
+	}
+  }
+  
   &__arrow {
 	&--left {
 	  position: absolute;
