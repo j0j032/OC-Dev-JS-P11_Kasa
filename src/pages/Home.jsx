@@ -15,8 +15,8 @@ const Home = () => {
 		<div>
 			<Header/>
 			<main>
-				<div className={'banner'}> {/*style in app.scss*/}
-					<img src={bannerCover} alt={'paysage'}/>
+				<div className='banner'> {/*style in app.scss*/}
+					<img src={bannerCover} alt='paysage'/>
 					<span>Chez vous, partout et ailleurs</span>
 				</div>
 				{isLoading ? (<Loader/>) : (
