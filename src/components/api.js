@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 import axios from 'axios'
 
-const urlLodging = './data/flats.json'
+const urlLodging = './data/lodging.json'
 
 export const useGetData = (url = urlLodging, filter) => {
 	const [data, setData] = useState({})

@@ -1,9 +1,10 @@
 import React from 'react'
 import Header from '../components/Header/Header'
 import {useGetData} from '../components/api'
-import Footer from '../components/footer/Footer'
+import Footer from '../components/Footer/Footer'
 import Dropdown from '../components/Dropdown/Dropdown'
-import Loader from '../components/loader/Loader'
+import Loader from '../components/Loader/Loader'
+import bannerCover from '../assets/img/bannerCover2.jpg'
 
 const About = () => {
 	const {data, isLoading, error} = useGetData('../data/values.json')
@@ -14,7 +15,7 @@ const About = () => {
 			<Header/>
 			<main>
 				<div className={'banner banner--about'}>
-					<img src={`./bannerCover2.jpg`} alt={'paysage'}/>
+					<img src={bannerCover} alt={'paysage'}/>
 				</div>
 				<div className={'dropdowns-container'}>
 					<Dropdown value={'Fiabilité'} content={fiability}/>

@@ -1,11 +1,11 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
 
-const FlatItem = ({flat}) => {
+const GalleryItem = ({flat}) => {
 	const {id, title, cover} = flat
 	return (
 		<NavLink to={`/logement/${id}`}>
-			<li className={'flat-item'}>
+			<li className={'gallery-item'}>
 				<img src={cover} alt={`logement ${title}`}/>
 				<span>{title}</span>
 			</li>
@@ -13,4 +13,4 @@ const FlatItem = ({flat}) => {
 	)
 }
 
-export default FlatItem
+export default GalleryItem

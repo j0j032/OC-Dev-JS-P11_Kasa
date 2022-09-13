@@ -1,16 +1,16 @@
 @import './style/variables';
 @import './style/mixins';
 @import './style/reset';
-@import './App.scss';
+@import 'src/style/App';
 @import './components/Header/Header';
 @import './components/Error404/Error404';
-@import './components/flatList/FlatList';
-@import './components/flatItem/FlatItem';
-@import './components/footer/Footer';
-@import './components/rating/Rating';
-@import './components/loader/Loader';
-@import './components/carrousel/Carrousel';
-@import './components/lodgingInfos/LodgingInfos';
+@import 'src/components/Gallery/Gallery';
+@import 'src/components/GalleryItem/GalleryItem';
+@import 'src/components/Footer/Footer';
+@import 'src/components/Rating/Rating';
+@import 'src/components/Loader/Loader';
+@import 'src/components/Carrousel/Carrousel';
+@import 'src/components/LodgingInfos/LodgingInfos';
 @import './components/Dropdown/Dropdown';
 
 
