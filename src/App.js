@@ -6,6 +6,7 @@ import Lodging from './pages/Lodging'
 
 
 function App() {
+	
 	return (
 		<BrowserRouter>
 			<Routes>

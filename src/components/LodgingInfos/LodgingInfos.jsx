@@ -1,5 +1,5 @@
 import React from 'react'
-import Rating from '../rating/Rating'
+import Rating from '../Rating/Rating'
 
 const LodgingInfos = ({lodging}) => {
 	const {id, title, location, rating, host: {name, picture}} = lodging

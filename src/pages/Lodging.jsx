@@ -1,11 +1,11 @@
 import React from 'react'
 import {useParams} from 'react-router-dom'
 import Header from '../components/Header/Header'
-import Footer from '../components/footer/Footer'
-import LodgingInfos from '../components/lodgingInfos/LodgingInfos'
-import Carrousel from '../components/carrousel/Carrousel'
+import Footer from '../components/Footer/Footer'
+import LodgingInfos from '../components/LodgingInfos/LodgingInfos'
+import Carrousel from '../components/Carrousel/Carrousel'
 import {useGetData} from '../components/api'
-import Loader from '../components/loader/Loader'
+import Loader from '../components/Loader/Loader'
 import Dropdown from '../components/Dropdown/Dropdown'
 
 const Lodging = () => {
@@ -15,7 +15,7 @@ const Lodging = () => {
 		method: 'find',
 		callback: (item) => item.id === id
 	}
-	const {data, isLoading, error} = useGetData('../data/flats.json', findById)
+	const {data, isLoading, error} = useGetData('../data/lodging.json', findById)
 	
 	if (error) return <span>Oups il y a eu un problème</span>
 	

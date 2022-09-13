@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import arrowDown from '../../assets/icons/arrowDown.svg'
 
 const Dropdown = ({value, content}) => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -9,7 +10,7 @@ const Dropdown = ({value, content}) => {
 				<div className={'toggle__btn'}>
 					<p>{value}</p>
 					<img className={isOpen ? 'toggle__arrow--up' : 'toggle__arrow--down'}
-						 src={'../arrowDown.svg'} alt={'arrow'}/>
+						 src={arrowDown} alt={'arrow'}/>
 				</div>
 			</button>
 			{
