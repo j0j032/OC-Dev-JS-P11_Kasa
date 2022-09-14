@@ -1,0 +1,14 @@
+.raiting-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.stars {
+  @include mobile {
+	width: 2.4rem;
+  }
+  @include smallMobile {
+	width: 1.6rem;
+  }
+}
