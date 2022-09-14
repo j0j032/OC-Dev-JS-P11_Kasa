@@ -7,7 +7,9 @@ const GalleryItem = ({flat}) => {
 		<NavLink to={`/logement/${id}`}>
 			<li className='gallery-item'>
 				<img src={cover} alt={`logement ${title}`}/>
-				<span>{title}</span>
+				<div className='blur-bg'>
+					<span>{title}</span>
+				</div>
 			</li>
 		</NavLink>
 	)
