@@ -6,8 +6,10 @@ const GalleryItem = ({flat}) => {
 	return (
 		<NavLink to={`/logement/${id}`}>
 			<li className='gallery-item'>
-				<img src={cover} alt={`logement ${title}`}/>
-				<span>{title}</span>
+				<div>
+					<img src={cover} alt={`logement ${title}`}/>
+					<span>{title}</span>
+				</div>
 			</li>
 		</NavLink>
 	)

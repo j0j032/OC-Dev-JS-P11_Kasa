@@ -11,14 +11,18 @@ const Carrousel = ({lodging}) => {
 		<div className={'carrousel'}>
 			<img className={'carrousel__img'} src={pictures[currentPicture]}
 				 alt={`${title} n° ${currentPicture + 1}`}/>
-			<span
-				className={'carrousel__counter'}>{`${currentPicture + 1}/${pictures.length}`}</span>
-			<span className={'carrousel__arrow--left'} onClick={() => prevPicture()}>
+			
+			{pictures.length > 1 &&
+				<span className={'carrousel__counter'}>{`${currentPicture + 1}/${pictures.length}`}
+				</span>}
+			{pictures.length > 1 &&
+				<span className={'carrousel__arrow--left'} onClick={() => prevPicture()}>
 				<img src={arrowLeft} alt={'précédent'}/>
-			</span>
-			<span className={'carrousel__arrow--right'} onClick={() => nextPicture()}>
+				</span>}
+			{pictures.length > 1 &&
+				<span className={'carrousel__arrow--right'} onClick={() => nextPicture()}>
 				<img src={arrowRight} alt={'suivant'}/>
-			</span>
+				</span>}
 		</div>
 	)
 }
