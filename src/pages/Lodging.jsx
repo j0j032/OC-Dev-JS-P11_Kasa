@@ -7,6 +7,7 @@ import Carrousel from '../components/Carrousel/Carrousel'
 import {useGetData} from '../components/api'
 import Loader from '../components/Loader/Loader'
 import Dropdown from '../components/Dropdown/Dropdown'
+import Error404Page from './Error404Page'
 
 const Lodging = () => {
 	
@@ -17,8 +18,11 @@ const Lodging = () => {
 	}
 	const {data, isLoading, error} = useGetData('../data/lodging.json', findById)
 	
-	if (error) return <span>Oups il y a eu un problème</span>
-	
+	if (error || data === undefined) return (
+		<div>
+			<Error404Page/>
+		</div>
+	)
 	return isLoading ? (<Loader/>) : (
 		<div>
 			<Header/>
