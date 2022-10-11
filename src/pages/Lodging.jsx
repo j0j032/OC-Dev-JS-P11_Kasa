@@ -8,15 +8,16 @@ import {useGetData} from '../components/api'
 import Loader from '../components/Loader/Loader'
 import Dropdown from '../components/Dropdown/Dropdown'
 import Error404Page from './Error404Page'
+import {useSelector} from 'react-redux'
 
 const Lodging = () => {
-	
 	const {id} = useParams()
+	const data = useSelector(state => state.lodgings.lodgings)
 	const findById = {
 		method: 'find',
 		callback: (item) => item.id === id
 	}
-	const {data, isLoading, error} = useGetData('../data/lodging.json', findById)
+	const {isLoading, error} = useGetData('../data/lodging.json', findById)
 	
 	if (error || data === undefined) return (
 		<div>

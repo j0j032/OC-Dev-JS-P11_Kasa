@@ -1,13 +1,15 @@
 import GalleryItem from '../GalleryItem/GalleryItem'
+import {useSelector} from 'react-redux'
 
-const Gallery = ({lodgings}) => {
+const Gallery = () => {
+	const lodgings = useSelector(state => state.lodgings.lodgings)
 	
 	return (
 		<div className='gallery-item__container'>
 			<ul className='gallery-item__repeater'>
 				{
-					lodgings.map((flat) => (
-						<GalleryItem key={flat.id} flat={flat}/>
+					lodgings.map((lodging) => (
+						<GalleryItem key={lodging.id} flat={lodging}/>
 					))
 				}
 			</ul>
