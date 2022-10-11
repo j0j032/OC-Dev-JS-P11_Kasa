@@ -1,14 +1,15 @@
 import React from 'react'
 import Header from '../components/Header/Header'
-import {useGetData} from '../components/api'
 import Footer from '../components/Footer/Footer'
 import Dropdown from '../components/Dropdown/Dropdown'
 import Loader from '../components/Loader/Loader'
 import bannerCover from '../assets/img/bannerCover2.jpg'
+import {useQuery} from 'react-query'
+import {getLodging} from '../apiHandler'
 
 const About = () => {
-	const {data, isLoading, error} = useGetData('../data/values.json')
-	const {fiability, security, respect, service} = data
+	const url = '../data/values.json'
+	const {data, isLoading, error} = useQuery(['values'], () => getLodging(url))
 	if (error) return <span>Oups il y a eu un problème</span>
 	return isLoading ? (<Loader/>) : (
 		<div>
@@ -18,10 +19,10 @@ const About = () => {
 					<img src={bannerCover} alt='paysage'/>
 				</div>
 				<div className='dropdowns-container'>
-					<Dropdown value={'Fiabilité'} content={fiability}/>
-					<Dropdown value={'Respect'} content={respect}/>
-					<Dropdown value={'Service'} content={service}/>
-					<Dropdown value={'Sécurité'} content={security}/>
+					<Dropdown value={'Fiabilité'} content={data.fiability}/>
+					<Dropdown value={'Respect'} content={data.respect}/>
+					<Dropdown value={'Service'} content={data.service}/>
+					<Dropdown value={'Sécurité'} content={data.security}/>
 				</div>
 			</main>
 			<Footer/>
